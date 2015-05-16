@@ -7,14 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39D2853D1B0787E800A483EC /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D2853C1B0787E800A483EC /* Article.m */; };
+		39D285401B0787E900A483EC /* RssSubscribe.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D2853F1B0787E900A483EC /* RssSubscribe.m */; };
+		39D285491B078A9400A483EC /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D285481B078A9400A483EC /* CoreDataTableViewController.m */; };
+		39D2854C1B078AC600A483EC /* RssSubscribeListCDTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D2854B1B078AC600A483EC /* RssSubscribeListCDTVC.m */; };
 		39E1C49F1B062B53001C75C0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E1C49E1B062B53001C75C0 /* main.m */; };
 		39E1C4A21B062B53001C75C0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E1C4A11B062B53001C75C0 /* AppDelegate.m */; };
 		39E1C4A51B062B53001C75C0 /* RssReaderFree.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 39E1C4A31B062B53001C75C0 /* RssReaderFree.xcdatamodeld */; };
-		39E1C4A81B062B53001C75C0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E1C4A71B062B53001C75C0 /* ViewController.m */; };
 		39E1C4AB1B062B53001C75C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39E1C4A91B062B53001C75C0 /* Main.storyboard */; };
 		39E1C4AD1B062B53001C75C0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39E1C4AC1B062B53001C75C0 /* Images.xcassets */; };
 		39E1C4B01B062B53001C75C0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39E1C4AE1B062B53001C75C0 /* LaunchScreen.xib */; };
 		39E1C4BC1B062B53001C75C0 /* RssReaderFreeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E1C4BB1B062B53001C75C0 /* RssReaderFreeTests.m */; };
+		39E1C4CD1B06314D001C75C0 /* icoFav@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39E1C4CA1B06314D001C75C0 /* icoFav@2x.png */; };
+		39E1C4CE1B06314D001C75C0 /* icoHome@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39E1C4CB1B06314D001C75C0 /* icoHome@2x.png */; };
+		39E1C4CF1B06314D001C75C0 /* icoSetting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39E1C4CC1B06314D001C75C0 /* icoSetting@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,20 +34,29 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		39D2853B1B0787E800A483EC /* Article.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Article.h; path = Model/Article.h; sourceTree = SOURCE_ROOT; };
+		39D2853C1B0787E800A483EC /* Article.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Article.m; path = Model/Article.m; sourceTree = SOURCE_ROOT; };
+		39D2853E1B0787E900A483EC /* RssSubscribe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RssSubscribe.h; path = Model/RssSubscribe.h; sourceTree = SOURCE_ROOT; };
+		39D2853F1B0787E900A483EC /* RssSubscribe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RssSubscribe.m; path = Model/RssSubscribe.m; sourceTree = SOURCE_ROOT; };
+		39D285471B078A9400A483EC /* CoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataTableViewController.h; sourceTree = "<group>"; };
+		39D285481B078A9400A483EC /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTableViewController.m; sourceTree = "<group>"; };
+		39D2854A1B078AC600A483EC /* RssSubscribeListCDTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RssSubscribeListCDTVC.h; path = Controller/RssSubscribeListCDTVC.h; sourceTree = SOURCE_ROOT; };
+		39D2854B1B078AC600A483EC /* RssSubscribeListCDTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RssSubscribeListCDTVC.m; path = Controller/RssSubscribeListCDTVC.m; sourceTree = SOURCE_ROOT; };
 		39E1C4991B062B53001C75C0 /* RssReaderFree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RssReaderFree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39E1C49D1B062B53001C75C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39E1C49E1B062B53001C75C0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		39E1C4A01B062B53001C75C0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		39E1C4A11B062B53001C75C0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		39E1C4A41B062B53001C75C0 /* RssReaderFree.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RssReaderFree.xcdatamodel; sourceTree = "<group>"; };
-		39E1C4A61B062B53001C75C0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		39E1C4A71B062B53001C75C0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		39E1C4AA1B062B53001C75C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		39E1C4AC1B062B53001C75C0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		39E1C4AF1B062B53001C75C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		39E1C4B51B062B53001C75C0 /* RssReaderFreeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RssReaderFreeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		39E1C4BA1B062B53001C75C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39E1C4BB1B062B53001C75C0 /* RssReaderFreeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RssReaderFreeTests.m; sourceTree = "<group>"; };
+		39E1C4CA1B06314D001C75C0 /* icoFav@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icoFav@2x.png"; sourceTree = "<group>"; };
+		39E1C4CB1B06314D001C75C0 /* icoHome@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icoHome@2x.png"; sourceTree = "<group>"; };
+		39E1C4CC1B06314D001C75C0 /* icoSetting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icoSetting@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +77,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		39D285461B078A9400A483EC /* CoreDataTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				39D285471B078A9400A483EC /* CoreDataTableViewController.h */,
+				39D285481B078A9400A483EC /* CoreDataTableViewController.m */,
+			);
+			path = CoreDataTableViewController;
+			sourceTree = "<group>";
+		};
 		39E1C4901B062B53001C75C0 = {
 			isa = PBXGroup;
 			children = (
@@ -83,14 +107,12 @@
 		39E1C49B1B062B53001C75C0 /* RssReaderFree */ = {
 			isa = PBXGroup;
 			children = (
-				39E1C4A01B062B53001C75C0 /* AppDelegate.h */,
-				39E1C4A11B062B53001C75C0 /* AppDelegate.m */,
-				39E1C4A61B062B53001C75C0 /* ViewController.h */,
-				39E1C4A71B062B53001C75C0 /* ViewController.m */,
+				39E1C4C71B062BCE001C75C0 /* Model */,
+				39E1C4C61B062BC6001C75C0 /* View */,
+				39E1C4C51B062BBA001C75C0 /* Controller */,
 				39E1C4A91B062B53001C75C0 /* Main.storyboard */,
 				39E1C4AC1B062B53001C75C0 /* Images.xcassets */,
 				39E1C4AE1B062B53001C75C0 /* LaunchScreen.xib */,
-				39E1C4A31B062B53001C75C0 /* RssReaderFree.xcdatamodeld */,
 				39E1C49C1B062B53001C75C0 /* Supporting Files */,
 			);
 			path = RssReaderFree;
@@ -99,6 +121,9 @@
 		39E1C49C1B062B53001C75C0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				39E1C4A01B062B53001C75C0 /* AppDelegate.h */,
+				39E1C4A11B062B53001C75C0 /* AppDelegate.m */,
+				39E1C4C81B0630D8001C75C0 /* image */,
 				39E1C49D1B062B53001C75C0 /* Info.plist */,
 				39E1C49E1B062B53001C75C0 /* main.m */,
 			);
@@ -120,6 +145,53 @@
 				39E1C4BA1B062B53001C75C0 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		39E1C4C51B062BBA001C75C0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				39D2854A1B078AC600A483EC /* RssSubscribeListCDTVC.h */,
+				39D2854B1B078AC600A483EC /* RssSubscribeListCDTVC.m */,
+				39D285461B078A9400A483EC /* CoreDataTableViewController */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		39E1C4C61B062BC6001C75C0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		39E1C4C71B062BCE001C75C0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				39E1C4A31B062B53001C75C0 /* RssReaderFree.xcdatamodeld */,
+				39D2853E1B0787E900A483EC /* RssSubscribe.h */,
+				39D2853F1B0787E900A483EC /* RssSubscribe.m */,
+				39D2853B1B0787E800A483EC /* Article.h */,
+				39D2853C1B0787E800A483EC /* Article.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		39E1C4C81B0630D8001C75C0 /* image */ = {
+			isa = PBXGroup;
+			children = (
+				39E1C4C91B063103001C75C0 /* icon */,
+			);
+			name = image;
+			sourceTree = "<group>";
+		};
+		39E1C4C91B063103001C75C0 /* icon */ = {
+			isa = PBXGroup;
+			children = (
+				39E1C4CA1B06314D001C75C0 /* icoFav@2x.png */,
+				39E1C4CB1B06314D001C75C0 /* icoHome@2x.png */,
+				39E1C4CC1B06314D001C75C0 /* icoSetting@2x.png */,
+			);
+			name = icon;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,7 +275,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				39E1C4AB1B062B53001C75C0 /* Main.storyboard in Resources */,
+				39E1C4CF1B06314D001C75C0 /* icoSetting@2x.png in Resources */,
 				39E1C4B01B062B53001C75C0 /* LaunchScreen.xib in Resources */,
+				39E1C4CE1B06314D001C75C0 /* icoHome@2x.png in Resources */,
+				39E1C4CD1B06314D001C75C0 /* icoFav@2x.png in Resources */,
 				39E1C4AD1B062B53001C75C0 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,10 +297,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39D2854C1B078AC600A483EC /* RssSubscribeListCDTVC.m in Sources */,
 				39E1C4A51B062B53001C75C0 /* RssReaderFree.xcdatamodeld in Sources */,
+				39D2853D1B0787E800A483EC /* Article.m in Sources */,
+				39D285491B078A9400A483EC /* CoreDataTableViewController.m in Sources */,
 				39E1C4A21B062B53001C75C0 /* AppDelegate.m in Sources */,
-				39E1C4A81B062B53001C75C0 /* ViewController.m in Sources */,
 				39E1C49F1B062B53001C75C0 /* main.m in Sources */,
+				39D285401B0787E900A483EC /* RssSubscribe.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +494,7 @@
 				39E1C4C11B062B53001C75C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		39E1C4C21B062B53001C75C0 /* Build configuration list for PBXNativeTarget "RssReaderFreeTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +503,7 @@
 				39E1C4C41B062B53001C75C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
