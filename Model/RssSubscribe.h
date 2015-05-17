@@ -2,7 +2,7 @@
 //  RssSubscribe.h
 //  RssReaderFree
 //
-//  Created by oushunwu on 15/5/16.
+//  Created by oushunwu on 15/5/17.
 //  Copyright (c) 2015年 oushunwu. All rights reserved.
 //
 
@@ -20,5 +20,6 @@
 @property (nonatomic, retain) NSString * title;
 @property (nonatomic, retain) NSNumber * total;
 @property (nonatomic, retain) NSNumber * updateTimeInterval;
+@property (nonatomic, retain) NSString * url;
 
 @end

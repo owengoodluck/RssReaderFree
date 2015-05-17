@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		39D2853D1B0787E800A483EC /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D2853C1B0787E800A483EC /* Article.m */; };
-		39D285401B0787E900A483EC /* RssSubscribe.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D2853F1B0787E900A483EC /* RssSubscribe.m */; };
 		39D285491B078A9400A483EC /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D285481B078A9400A483EC /* CoreDataTableViewController.m */; };
 		39D2854C1B078AC600A483EC /* RssSubscribeListCDTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D2854B1B078AC600A483EC /* RssSubscribeListCDTVC.m */; };
+		39E017D71B08391800BD0490 /* Dao.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E017D61B08391800BD0490 /* Dao.m */; };
+		39E017DB1B083BCE00BD0490 /* DebugLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E017DA1B083BCE00BD0490 /* DebugLog.m */; };
+		39E017DD1B0840B000BD0490 /* RecommendFeedList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 39E017DC1B0840B000BD0490 /* RecommendFeedList.plist */; };
+		39E017E01B08453500BD0490 /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E017DF1B08453500BD0490 /* Article.m */; };
+		39E017E31B08453600BD0490 /* RssSubscribe.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E017E21B08453600BD0490 /* RssSubscribe.m */; };
+		39E017E61B084A1500BD0490 /* ArticleListCDTVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E017E51B084A1500BD0490 /* ArticleListCDTVCViewController.m */; };
 		39E1C49F1B062B53001C75C0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E1C49E1B062B53001C75C0 /* main.m */; };
 		39E1C4A21B062B53001C75C0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E1C4A11B062B53001C75C0 /* AppDelegate.m */; };
 		39E1C4A51B062B53001C75C0 /* RssReaderFree.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 39E1C4A31B062B53001C75C0 /* RssReaderFree.xcdatamodeld */; };
@@ -34,14 +38,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		39D2853B1B0787E800A483EC /* Article.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Article.h; path = Model/Article.h; sourceTree = SOURCE_ROOT; };
-		39D2853C1B0787E800A483EC /* Article.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Article.m; path = Model/Article.m; sourceTree = SOURCE_ROOT; };
-		39D2853E1B0787E900A483EC /* RssSubscribe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RssSubscribe.h; path = Model/RssSubscribe.h; sourceTree = SOURCE_ROOT; };
-		39D2853F1B0787E900A483EC /* RssSubscribe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RssSubscribe.m; path = Model/RssSubscribe.m; sourceTree = SOURCE_ROOT; };
 		39D285471B078A9400A483EC /* CoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataTableViewController.h; sourceTree = "<group>"; };
 		39D285481B078A9400A483EC /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTableViewController.m; sourceTree = "<group>"; };
 		39D2854A1B078AC600A483EC /* RssSubscribeListCDTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RssSubscribeListCDTVC.h; path = Controller/RssSubscribeListCDTVC.h; sourceTree = SOURCE_ROOT; };
 		39D2854B1B078AC600A483EC /* RssSubscribeListCDTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RssSubscribeListCDTVC.m; path = Controller/RssSubscribeListCDTVC.m; sourceTree = SOURCE_ROOT; };
+		39E017D51B08391800BD0490 /* Dao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dao.h; sourceTree = "<group>"; };
+		39E017D61B08391800BD0490 /* Dao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dao.m; sourceTree = "<group>"; };
+		39E017D91B083BCE00BD0490 /* DebugLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugLog.h; sourceTree = "<group>"; };
+		39E017DA1B083BCE00BD0490 /* DebugLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugLog.m; sourceTree = "<group>"; };
+		39E017DC1B0840B000BD0490 /* RecommendFeedList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RecommendFeedList.plist; sourceTree = "<group>"; };
+		39E017DE1B08453500BD0490 /* Article.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Article.h; path = Model/Article.h; sourceTree = SOURCE_ROOT; };
+		39E017DF1B08453500BD0490 /* Article.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Article.m; path = Model/Article.m; sourceTree = SOURCE_ROOT; };
+		39E017E11B08453600BD0490 /* RssSubscribe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RssSubscribe.h; path = Model/RssSubscribe.h; sourceTree = SOURCE_ROOT; };
+		39E017E21B08453600BD0490 /* RssSubscribe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RssSubscribe.m; path = Model/RssSubscribe.m; sourceTree = SOURCE_ROOT; };
+		39E017E41B084A1500BD0490 /* ArticleListCDTVCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArticleListCDTVCViewController.h; path = Controller/ArticleListCDTVCViewController.h; sourceTree = SOURCE_ROOT; };
+		39E017E51B084A1500BD0490 /* ArticleListCDTVCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ArticleListCDTVCViewController.m; path = Controller/ArticleListCDTVCViewController.m; sourceTree = SOURCE_ROOT; };
 		39E1C4991B062B53001C75C0 /* RssReaderFree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RssReaderFree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39E1C49D1B062B53001C75C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39E1C49E1B062B53001C75C0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -86,6 +97,24 @@
 			path = CoreDataTableViewController;
 			sourceTree = "<group>";
 		};
+		39E017D11B08332200BD0490 /* Dao */ = {
+			isa = PBXGroup;
+			children = (
+				39E017D51B08391800BD0490 /* Dao.h */,
+				39E017D61B08391800BD0490 /* Dao.m */,
+			);
+			name = Dao;
+			sourceTree = "<group>";
+		};
+		39E017D81B083BCE00BD0490 /* log */ = {
+			isa = PBXGroup;
+			children = (
+				39E017D91B083BCE00BD0490 /* DebugLog.h */,
+				39E017DA1B083BCE00BD0490 /* DebugLog.m */,
+			);
+			path = log;
+			sourceTree = "<group>";
+		};
 		39E1C4901B062B53001C75C0 = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +136,8 @@
 		39E1C49B1B062B53001C75C0 /* RssReaderFree */ = {
 			isa = PBXGroup;
 			children = (
+				39E017D81B083BCE00BD0490 /* log */,
+				39E017D11B08332200BD0490 /* Dao */,
 				39E1C4C71B062BCE001C75C0 /* Model */,
 				39E1C4C61B062BC6001C75C0 /* View */,
 				39E1C4C51B062BBA001C75C0 /* Controller */,
@@ -126,6 +157,7 @@
 				39E1C4C81B0630D8001C75C0 /* image */,
 				39E1C49D1B062B53001C75C0 /* Info.plist */,
 				39E1C49E1B062B53001C75C0 /* main.m */,
+				39E017DC1B0840B000BD0490 /* RecommendFeedList.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -150,9 +182,11 @@
 		39E1C4C51B062BBA001C75C0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				39D285461B078A9400A483EC /* CoreDataTableViewController */,
 				39D2854A1B078AC600A483EC /* RssSubscribeListCDTVC.h */,
 				39D2854B1B078AC600A483EC /* RssSubscribeListCDTVC.m */,
-				39D285461B078A9400A483EC /* CoreDataTableViewController */,
+				39E017E41B084A1500BD0490 /* ArticleListCDTVCViewController.h */,
+				39E017E51B084A1500BD0490 /* ArticleListCDTVCViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -167,11 +201,11 @@
 		39E1C4C71B062BCE001C75C0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				39E017E11B08453600BD0490 /* RssSubscribe.h */,
+				39E017E21B08453600BD0490 /* RssSubscribe.m */,
+				39E017DE1B08453500BD0490 /* Article.h */,
+				39E017DF1B08453500BD0490 /* Article.m */,
 				39E1C4A31B062B53001C75C0 /* RssReaderFree.xcdatamodeld */,
-				39D2853E1B0787E900A483EC /* RssSubscribe.h */,
-				39D2853F1B0787E900A483EC /* RssSubscribe.m */,
-				39D2853B1B0787E800A483EC /* Article.h */,
-				39D2853C1B0787E800A483EC /* Article.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -276,6 +310,7 @@
 			files = (
 				39E1C4AB1B062B53001C75C0 /* Main.storyboard in Resources */,
 				39E1C4CF1B06314D001C75C0 /* icoSetting@2x.png in Resources */,
+				39E017DD1B0840B000BD0490 /* RecommendFeedList.plist in Resources */,
 				39E1C4B01B062B53001C75C0 /* LaunchScreen.xib in Resources */,
 				39E1C4CE1B06314D001C75C0 /* icoHome@2x.png in Resources */,
 				39E1C4CD1B06314D001C75C0 /* icoFav@2x.png in Resources */,
@@ -297,13 +332,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39E017E01B08453500BD0490 /* Article.m in Sources */,
 				39D2854C1B078AC600A483EC /* RssSubscribeListCDTVC.m in Sources */,
+				39E017E61B084A1500BD0490 /* ArticleListCDTVCViewController.m in Sources */,
 				39E1C4A51B062B53001C75C0 /* RssReaderFree.xcdatamodeld in Sources */,
-				39D2853D1B0787E800A483EC /* Article.m in Sources */,
+				39E017DB1B083BCE00BD0490 /* DebugLog.m in Sources */,
 				39D285491B078A9400A483EC /* CoreDataTableViewController.m in Sources */,
+				39E017D71B08391800BD0490 /* Dao.m in Sources */,
+				39E017E31B08453600BD0490 /* RssSubscribe.m in Sources */,
 				39E1C4A21B062B53001C75C0 /* AppDelegate.m in Sources */,
 				39E1C49F1B062B53001C75C0 /* main.m in Sources */,
-				39D285401B0787E900A483EC /* RssSubscribe.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

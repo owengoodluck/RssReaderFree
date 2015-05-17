@@ -7,16 +7,56 @@
 //
 
 #import "AppDelegate.h"
+#import "Dao.h"
+#import "RssSubscribe.h"
 
 @interface AppDelegate ()
+
+@property(strong,nonatomic) Dao * commonDao;
 
 @end
 
 @implementation AppDelegate
 
+-(Dao *)commonDao{
+    if (!_commonDao) {
+        _commonDao = [[Dao alloc]initWithManagedObjectContext:self.managedObjectContext];
+    }
+    return _commonDao;
+}
+
+//if the first time to run the application . load data from RecommendFeedList.plist and persist it into core data
+-(void)loadRssScribeList{
+    NSArray * rssSubscribeList =[self.commonDao objectsOfEntityName:@"RssSubscribe"];
+    if (rssSubscribeList && [rssSubscribeList count] >0) {
+        
+    }else{
+        //load from RecommendFeedList.plist
+        //从plist文件中读取推荐源
+        NSMutableArray *allSurscribes = [NSMutableArray array];
+        NSString *plistPath = [[NSBundle mainBundle]pathForResource:@"RecommendFeedList" ofType:@"plist"];
+        NSArray *recommends = [[NSArray alloc]initWithContentsOfFile:plistPath];
+        
+        for (NSDictionary *aDict in recommends) {
+            NSError *error;
+            RssSubscribe *subscribe = [NSEntityDescription insertNewObjectForEntityForName:@"RssSubscribe" inManagedObjectContext:self.managedObjectContext];
+            subscribe.title = aDict[@"title"];
+            subscribe.sumary = aDict[@"summary"];
+            subscribe.link = aDict[@"link"];
+            subscribe.url= aDict[@"url"];
+            subscribe.createDate = [NSDate date];
+            subscribe.total = @0;
+            subscribe.lastUpdateTime = [NSDate dateWithTimeIntervalSince1970:0];
+            subscribe.updateTimeInterval = @600;//默认1分钟更新一次
+            [self saveContext];
+        }
+    }
+}
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [self loadRssScribeList];
     return YES;
 }
 

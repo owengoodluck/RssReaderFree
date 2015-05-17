@@ -8,6 +8,8 @@
 
 #import "RssSubscribeListCDTVC.h"
 #import "RssSubscribe.h"
+#import "AppDelegate.h"
+#import "ArticleListCDTVCViewController.h"
 
 @interface RssSubscribeListCDTVC ()
 
@@ -33,29 +35,43 @@
                                                                                   cacheName:nil];
 }
 
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 1;
-}
-
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 1;
-}
-
-
 -(UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NSString *cellIdentifier = @"RssSubscribeCell";
     UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier: cellIdentifier];
-    NSObject * obj = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    RssSubscribe * obj = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
-    cell.textLabel.text = @"title";
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@",obj];
+    cell.textLabel.text = obj.title;
+    cell.detailTextLabel.text = obj.sumary;
     return cell;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    AppDelegate *appDelegete = ((AppDelegate *)([[UIApplication sharedApplication] delegate]));
+    self.managedObjectContext = appDelegete.managedObjectContext;
 }
+
+#pragma mark - Navigation
+-(void) prepareViewController:(id)vc forSegue :(UIStoryboardSegue *)segue forIndexPath:(NSIndexPath *)indexPath{
+    RssSubscribe *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    if ([vc isKindOfClass:[ ArticleListCDTVCViewController class]]) {
+        //prepare vc
+        ArticleListCDTVCViewController *targetVC = (ArticleListCDTVCViewController *) vc;
+        targetVC.rssSubscribeURL = [NSURL URLWithString:object.url];
+    }
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    NSIndexPath * indexPath = nil;
+    if ([sender isKindOfClass:[UITableViewCell class]]) {
+        indexPath = [self.tableView indexPathForCell:sender];
+    }
+    
+    [self prepareViewController:segue.destinationViewController
+                       forSegue:segue
+                   forIndexPath:indexPath];
+}
+
 
 @end
