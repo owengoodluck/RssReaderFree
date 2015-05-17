@@ -1,9 +1,11 @@
 
 #import "Dao.h"
+#import "AppDelegate.h"
 
 
 @implementation Dao {
 }
+
 
 /**
  * Designated initializer.
@@ -14,6 +16,11 @@
         _managedObjectContext = managedObjectContext;
     }
     return self;
+}
+
+- (id) init {
+    AppDelegate *appDelegete = ((AppDelegate *)([[UIApplication sharedApplication] delegate]));
+    return [self initWithManagedObjectContext:appDelegete.managedObjectContext];
 }
 
 /**

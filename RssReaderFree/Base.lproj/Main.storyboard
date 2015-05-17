@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
-        <!--Rss Subscribe ListCDTVC-->
+        <!--主页-->
         <scene sceneID="l4M-fu-taD">
             <objects>
                 <tableViewController id="lHg-wK-sID" customClass="RssSubscribeListCDTVC" sceneMemberID="viewController">
@@ -28,7 +28,7 @@
                             <outlet property="delegate" destination="lHg-wK-sID" id="o8g-DX-zlW"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="evt-bt-t2i"/>
+                    <navigationItem key="navigationItem" title="主页" id="evt-bt-t2i"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lCy-5M-N6p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -39,6 +39,7 @@
             <objects>
                 <tableViewController id="7qe-ny-zpv" customClass="ArticleListCDTVCViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="sRL-Oh-rfg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>

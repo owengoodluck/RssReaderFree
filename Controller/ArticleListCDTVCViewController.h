@@ -11,5 +11,6 @@
 @interface ArticleListCDTVCViewController : CoreDataTableViewController
 
 @property(strong,nonatomic) NSURL *rssSubscribeURL;
+//@property(strong,nonatomic) NSString *title;
 
 @end
