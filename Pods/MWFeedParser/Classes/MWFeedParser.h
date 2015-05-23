@@ -70,7 +70,7 @@ typedef enum { FeedTypeUnknown, FeedTypeRSS, FeedTypeRSS1, FeedTypeAtom } FeedTy
 @private
 	
 	// Required
-	id <MWFeedParserDelegate> __unsafe_unretained delegate;
+	id <MWFeedParserDelegate> __weak delegate;
 	
 	// Connection
 	NSURLConnection *urlConnection;
@@ -109,7 +109,7 @@ typedef enum { FeedTypeUnknown, FeedTypeRSS, FeedTypeRSS1, FeedTypeAtom } FeedTy
 #pragma mark Public Properties
 
 // Delegate to recieve data as it is parsed
-@property (nonatomic, unsafe_unretained) id <MWFeedParserDelegate> delegate;
+@property (nonatomic, weak) id <MWFeedParserDelegate> delegate;
 
 // Whether to parse feed info & all items, just feed info, or just feed items
 @property (nonatomic) ParseType feedParseType;

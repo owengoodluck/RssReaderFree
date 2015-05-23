@@ -9,6 +9,15 @@
 /* Begin PBXBuildFile section */
 		39D285491B078A9400A483EC /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D285481B078A9400A483EC /* CoreDataTableViewController.m */; };
 		39D2854C1B078AC600A483EC /* RssSubscribeListCDTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D2854B1B078AC600A483EC /* RssSubscribeListCDTVC.m */; };
+		39D566AC1B10661000B2C00B /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D566AB1B10661000B2C00B /* DetailViewController.m */; };
+		39D566AF1B10909700B2C00B /* HtmlPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D566AE1B10909700B2C00B /* HtmlPage.m */; };
+		39D566B31B10A2A700B2C00B /* HtmlElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D566B21B10A2A700B2C00B /* HtmlElement.m */; };
+		39D566B61B10A2F900B2C00B /* HtmlElementLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D566B51B10A2F900B2C00B /* HtmlElementLink.m */; };
+		39D566B91B10AA1800B2C00B /* HtmlElementP.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D566B81B10AA1800B2C00B /* HtmlElementP.m */; };
+		39D566BC1B10ACD700B2C00B /* HtmlElementDiv.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D566BB1B10ACD700B2C00B /* HtmlElementDiv.m */; };
+		39D566BF1B10B29000B2C00B /* css_dark.html in Resources */ = {isa = PBXBuildFile; fileRef = 39D566BD1B10B29000B2C00B /* css_dark.html */; };
+		39D566C01B10B29000B2C00B /* css.html in Resources */ = {isa = PBXBuildFile; fileRef = 39D566BE1B10B29000B2C00B /* css.html */; };
+		39D566C31B10B32700B2C00B /* HtmlPageArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D566C21B10B32700B2C00B /* HtmlPageArticle.m */; };
 		39DC54A01B0891090032ED3E /* ArticleDao.m in Sources */ = {isa = PBXBuildFile; fileRef = 39DC549F1B0891090032ED3E /* ArticleDao.m */; };
 		39E017D71B08391800BD0490 /* Dao.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E017D61B08391800BD0490 /* Dao.m */; };
 		39E017DB1B083BCE00BD0490 /* DebugLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E017DA1B083BCE00BD0490 /* DebugLog.m */; };
@@ -45,6 +54,22 @@
 		39D285481B078A9400A483EC /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTableViewController.m; sourceTree = "<group>"; };
 		39D2854A1B078AC600A483EC /* RssSubscribeListCDTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RssSubscribeListCDTVC.h; path = Controller/RssSubscribeListCDTVC.h; sourceTree = SOURCE_ROOT; };
 		39D2854B1B078AC600A483EC /* RssSubscribeListCDTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RssSubscribeListCDTVC.m; path = Controller/RssSubscribeListCDTVC.m; sourceTree = SOURCE_ROOT; };
+		39D566AA1B10661000B2C00B /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = Controller/DetailViewController.h; sourceTree = SOURCE_ROOT; };
+		39D566AB1B10661000B2C00B /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = Controller/DetailViewController.m; sourceTree = SOURCE_ROOT; };
+		39D566AD1B10909700B2C00B /* HtmlPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HtmlPage.h; path = Model/HtmlPage.h; sourceTree = SOURCE_ROOT; };
+		39D566AE1B10909700B2C00B /* HtmlPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HtmlPage.m; path = Model/HtmlPage.m; sourceTree = SOURCE_ROOT; };
+		39D566B11B10A2A700B2C00B /* HtmlElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HtmlElement.h; path = Model/HtmlElement.h; sourceTree = SOURCE_ROOT; };
+		39D566B21B10A2A700B2C00B /* HtmlElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HtmlElement.m; path = Model/HtmlElement.m; sourceTree = SOURCE_ROOT; };
+		39D566B41B10A2F900B2C00B /* HtmlElementLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HtmlElementLink.h; path = Model/HtmlElementLink.h; sourceTree = SOURCE_ROOT; };
+		39D566B51B10A2F900B2C00B /* HtmlElementLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HtmlElementLink.m; path = Model/HtmlElementLink.m; sourceTree = SOURCE_ROOT; };
+		39D566B71B10AA1800B2C00B /* HtmlElementP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HtmlElementP.h; path = Model/HtmlElementP.h; sourceTree = SOURCE_ROOT; };
+		39D566B81B10AA1800B2C00B /* HtmlElementP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HtmlElementP.m; path = Model/HtmlElementP.m; sourceTree = SOURCE_ROOT; };
+		39D566BA1B10ACD700B2C00B /* HtmlElementDiv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HtmlElementDiv.h; path = Model/HtmlElementDiv.h; sourceTree = SOURCE_ROOT; };
+		39D566BB1B10ACD700B2C00B /* HtmlElementDiv.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HtmlElementDiv.m; path = Model/HtmlElementDiv.m; sourceTree = SOURCE_ROOT; };
+		39D566BD1B10B29000B2C00B /* css_dark.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = css_dark.html; sourceTree = "<group>"; };
+		39D566BE1B10B29000B2C00B /* css.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = css.html; sourceTree = "<group>"; };
+		39D566C11B10B32700B2C00B /* HtmlPageArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HtmlPageArticle.h; sourceTree = "<group>"; };
+		39D566C21B10B32700B2C00B /* HtmlPageArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HtmlPageArticle.m; sourceTree = "<group>"; };
 		39DC549E1B0891090032ED3E /* ArticleDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArticleDao.h; path = Dao/ArticleDao.h; sourceTree = SOURCE_ROOT; };
 		39DC549F1B0891090032ED3E /* ArticleDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ArticleDao.m; path = Dao/ArticleDao.m; sourceTree = SOURCE_ROOT; };
 		39E017D51B08391800BD0490 /* Dao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dao.h; sourceTree = "<group>"; };
@@ -103,6 +128,25 @@
 				39D285481B078A9400A483EC /* CoreDataTableViewController.m */,
 			);
 			path = CoreDataTableViewController;
+			sourceTree = "<group>";
+		};
+		39D566B01B10A1EF00B2C00B /* html */ = {
+			isa = PBXGroup;
+			children = (
+				39D566AD1B10909700B2C00B /* HtmlPage.h */,
+				39D566AE1B10909700B2C00B /* HtmlPage.m */,
+				39D566B11B10A2A700B2C00B /* HtmlElement.h */,
+				39D566B21B10A2A700B2C00B /* HtmlElement.m */,
+				39D566B41B10A2F900B2C00B /* HtmlElementLink.h */,
+				39D566B51B10A2F900B2C00B /* HtmlElementLink.m */,
+				39D566B71B10AA1800B2C00B /* HtmlElementP.h */,
+				39D566B81B10AA1800B2C00B /* HtmlElementP.m */,
+				39D566BA1B10ACD700B2C00B /* HtmlElementDiv.h */,
+				39D566BB1B10ACD700B2C00B /* HtmlElementDiv.m */,
+				39D566C11B10B32700B2C00B /* HtmlPageArticle.h */,
+				39D566C21B10B32700B2C00B /* HtmlPageArticle.m */,
+			);
+			name = html;
 			sourceTree = "<group>";
 		};
 		39DC549A1B0881330032ED3E /* Utility */ = {
@@ -172,6 +216,8 @@
 		39E1C49C1B062B53001C75C0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				39D566BD1B10B29000B2C00B /* css_dark.html */,
+				39D566BE1B10B29000B2C00B /* css.html */,
 				39E1C4A01B062B53001C75C0 /* AppDelegate.h */,
 				39E1C4A11B062B53001C75C0 /* AppDelegate.m */,
 				39E1C4C81B0630D8001C75C0 /* image */,
@@ -207,6 +253,8 @@
 				39D2854B1B078AC600A483EC /* RssSubscribeListCDTVC.m */,
 				39E017E41B084A1500BD0490 /* ArticleListCDTVCViewController.h */,
 				39E017E51B084A1500BD0490 /* ArticleListCDTVCViewController.m */,
+				39D566AA1B10661000B2C00B /* DetailViewController.h */,
+				39D566AB1B10661000B2C00B /* DetailViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -221,6 +269,7 @@
 		39E1C4C71B062BCE001C75C0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				39D566B01B10A1EF00B2C00B /* html */,
 				39E017E11B08453600BD0490 /* RssSubscribe.h */,
 				39E017E21B08453600BD0490 /* RssSubscribe.m */,
 				39E017DE1B08453500BD0490 /* Article.h */,
@@ -349,8 +398,10 @@
 			files = (
 				39E1C4AB1B062B53001C75C0 /* Main.storyboard in Resources */,
 				39E1C4CF1B06314D001C75C0 /* icoSetting@2x.png in Resources */,
+				39D566BF1B10B29000B2C00B /* css_dark.html in Resources */,
 				39E017DD1B0840B000BD0490 /* RecommendFeedList.plist in Resources */,
 				39E1C4B01B062B53001C75C0 /* LaunchScreen.xib in Resources */,
+				39D566C01B10B29000B2C00B /* css.html in Resources */,
 				39E1C4CE1B06314D001C75C0 /* icoHome@2x.png in Resources */,
 				39E1C4CD1B06314D001C75C0 /* icoFav@2x.png in Resources */,
 				39E1C4AD1B062B53001C75C0 /* Images.xcassets in Resources */,
@@ -406,15 +457,22 @@
 			files = (
 				39E017E01B08453500BD0490 /* Article.m in Sources */,
 				39D2854C1B078AC600A483EC /* RssSubscribeListCDTVC.m in Sources */,
+				39D566C31B10B32700B2C00B /* HtmlPageArticle.m in Sources */,
 				39E017E61B084A1500BD0490 /* ArticleListCDTVCViewController.m in Sources */,
+				39D566AF1B10909700B2C00B /* HtmlPage.m in Sources */,
+				39D566BC1B10ACD700B2C00B /* HtmlElementDiv.m in Sources */,
 				39E1C4A51B062B53001C75C0 /* RssReaderFree.xcdatamodeld in Sources */,
 				39E017DB1B083BCE00BD0490 /* DebugLog.m in Sources */,
 				39D285491B078A9400A483EC /* CoreDataTableViewController.m in Sources */,
 				39E017D71B08391800BD0490 /* Dao.m in Sources */,
+				39D566B91B10AA1800B2C00B /* HtmlElementP.m in Sources */,
 				39E017E31B08453600BD0490 /* RssSubscribe.m in Sources */,
+				39D566B61B10A2F900B2C00B /* HtmlElementLink.m in Sources */,
+				39D566B31B10A2A700B2C00B /* HtmlElement.m in Sources */,
 				39E1C4A21B062B53001C75C0 /* AppDelegate.m in Sources */,
 				39E1C49F1B062B53001C75C0 /* main.m in Sources */,
 				39DC54A01B0891090032ED3E /* ArticleDao.m in Sources */,
+				39D566AC1B10661000B2C00B /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

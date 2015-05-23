@@ -60,6 +60,7 @@
         ArticleListCDTVCViewController *targetVC = (ArticleListCDTVCViewController *) vc;
         targetVC.rssSubscribeURL = [NSURL URLWithString:object.url];
         targetVC.title = object.title;
+        targetVC.hidesBottomBarWhenPushed = YES;
     }
 }
 

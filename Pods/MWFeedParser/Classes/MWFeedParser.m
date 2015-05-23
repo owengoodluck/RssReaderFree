@@ -753,9 +753,10 @@
 	MWLog(@"MWFeedParser: Parsing started");
 	
 	// Inform delegate
-	if ([delegate respondsToSelector:@selector(feedParserDidStart:)])
-		[delegate feedParserDidStart:self];
-	
+    if (delegate) {
+        if ([delegate respondsToSelector:@selector(feedParserDidStart:)])
+            [delegate feedParserDidStart:self];
+    }
 }
 
 - (void)parserDidEndDocument:(NSXMLParser *)parser {

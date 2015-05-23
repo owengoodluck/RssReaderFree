@@ -10,6 +10,7 @@
 #import "MWFeedParser.h"
 #import "Article.h"
 #import "ArticleDao.h"
+#import "DetailViewController.h"
 
 @interface ArticleListCDTVCViewController () <MWFeedParserDelegate>
 
@@ -20,24 +21,30 @@
 
 @implementation ArticleListCDTVCViewController
 
+- (IBAction)refresh:(UIRefreshControl *)sender {
+    [self parseRssFeedURL];
+}
+
 -(void)parseRssFeedURL{
+    [self.refreshControl beginRefreshing];
+    [self.feedParser stopParsing];//stop if already start
+    [self.feedParser parse];
+}
+
+-(void)setRssSubscribeURL:(NSURL *)rssSubscribeURL{
+//    NSLog(@"rssSubscribeURL = %@",rssSubscribeURL);
+    _rssSubscribeURL = rssSubscribeURL;
+    
     _feedParser = [[MWFeedParser alloc]initWithFeedURL:self.rssSubscribeURL];
     _feedParser.feedParseType = ParseTypeFull;
     _feedParser.delegate = self;
     _feedParser.connectionType = ConnectionTypeAsynchronously;
-    [_feedParser parse];
-}
-
--(void)setRssSubscribeURL:(NSURL *)rssSubscribeURL{
-    NSLog(@"rssSubscribeURL = %@",rssSubscribeURL);
-    _rssSubscribeURL = rssSubscribeURL;
     [self parseRssFeedURL];
-    [self setFetchedResultsControllerForTableView];
 }
 
 -(void)setFetchedResultsControllerForTableView{
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Article"];
-    request.sortDescriptors = @[ [[NSSortDescriptor alloc]initWithKey:@"title" ascending:YES] ];
+    request.sortDescriptors = @[ [[NSSortDescriptor alloc]initWithKey:@"date" ascending:NO] ];
     request.predicate = [NSPredicate predicateWithFormat:@" subscribeUrl = %@",_rssSubscribeURL];
     self.fetchedResultsController = [[NSFetchedResultsController alloc]initWithFetchRequest:request
                                                                        managedObjectContext:self.articleDao.managedObjectContext sectionNameKeyPath:nil
@@ -46,8 +53,12 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear: animated];
+    [self setFetchedResultsControllerForTableView];
 }
 
+-(void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -100,10 +111,16 @@
 - (void)feedParserDidFinish:(MWFeedParser *)parser{
     NSLog(@"4 feedParserDidFinish with url %@",self.rssSubscribeURL);
     [self.articleDao saveContext];
-    [self performFetch];
+    if (self.view.window) {
+        [self performFetch];
+    }else{
+        NSLog(@"%@ is not visible now ",[self class]);
+    }
+    [self.refreshControl endRefreshing];
 }
 - (void)feedParser:(MWFeedParser *)parser didFailWithError:(NSError *)error{
     NSLog(@"5 didFailWithError");
+    [self.refreshControl endRefreshing];
 
     
 }
@@ -114,5 +131,29 @@
     }
     return _articleDao;
 }
+
+#pragma mark - Navigation
+-(void) prepareViewController:(id)vc forSegue :(UIStoryboardSegue *)segue forIndexPath:(NSIndexPath *)indexPath{
+        Article *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    if ([vc isKindOfClass:[ DetailViewController class]]) {
+        //prepare vc
+        DetailViewController *targetVC = (DetailViewController *) vc;
+        targetVC.article=object;
+        targetVC.title = object.title;
+        targetVC.hidesBottomBarWhenPushed = YES;
+    }
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    NSIndexPath * indexPath = nil;
+    if ([sender isKindOfClass:[UITableViewCell class]]) {
+        indexPath = [self.tableView indexPathForCell:sender];
+    }
+    
+    [self prepareViewController:segue.destinationViewController
+                       forSegue:segue
+                   forIndexPath:indexPath];
+}
+
 
 @end
