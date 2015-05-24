@@ -24,17 +24,15 @@
 
     if (self.head) {
         page = [page stringByAppendingFormat:@"<head> %@ </head> ",self.head];
-        NSLog(@"head = %@",self.head);
     }
     
     if (self.body) {
         page = [page stringByAppendingFormat:@"<body> %@ </body> ",self.body];
-        NSLog(@"body = %@",self.body);
 
     }
     
     page = [page stringByAppendingString:@"</html>"];
-    NSLog(@"page = %@",page);
+    //NSLog(@"page = %@",page);
 
     return page;
 }

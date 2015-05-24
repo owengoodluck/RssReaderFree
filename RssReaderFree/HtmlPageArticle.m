@@ -43,8 +43,8 @@
         p.style = @"text-align:left;font-size:9pt;margin-left: 14px;margin-top: 10px;margin-bottom: 10px;color:#CCCCCC";
         NSDateFormatter *dateFormat = [NSDateFormatter new];
         [dateFormat setDateFormat:@"MM.dd HH:mm"];
-        [dateFormat stringFromDate:self.article.date];
-        p.content = [NSString stringWithFormat:@"%@ 发表于 %@",self.article.author, [dateFormat stringFromDate:self.article.date]];
+        NSString *dateString = [dateFormat stringFromDate:self.article.date];
+        p.content = [NSString stringWithFormat:@"%@ 发表于 %@",self.article.author, dateString];
         self.body = [self.body stringByAppendingString:[p htmlString]];
         
         HtmlElementDiv *divContent = [HtmlElementDiv new];

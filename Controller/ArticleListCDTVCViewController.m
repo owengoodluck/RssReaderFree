@@ -32,7 +32,6 @@
 }
 
 -(void)setRssSubscribeURL:(NSURL *)rssSubscribeURL{
-//    NSLog(@"rssSubscribeURL = %@",rssSubscribeURL);
     _rssSubscribeURL = rssSubscribeURL;
     
     _feedParser = [[MWFeedParser alloc]initWithFeedURL:self.rssSubscribeURL];
@@ -61,6 +60,8 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.automaticallyAdjustsScrollViewInsets = NO;
     // Do any additional setup after loading the view.
 }
 
@@ -70,7 +71,10 @@
     Article * obj = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
     cell.textLabel.text = obj.title;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@",obj.summary];
+    NSDateFormatter * dateFormat = [[NSDateFormatter alloc]init];
+    dateFormat.dateFormat = @"MM.dd HH:mm";//MM.dd HH:mm
+    NSString * dateString = [dateFormat stringFromDate:obj.date];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ %@",dateString,obj.summary];
     return cell;
 }
 
@@ -102,10 +106,6 @@
         article.summary = item.summary;
         article.title = item.title;
     }
-    
-//    article.updated = item.updated;
-
-    
 }
 
 - (void)feedParserDidFinish:(MWFeedParser *)parser{

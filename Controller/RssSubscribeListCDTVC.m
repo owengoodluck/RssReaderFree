@@ -47,6 +47,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    if([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0){
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
     // Do any additional setup after loading the view.
     AppDelegate *appDelegete = ((AppDelegate *)([[UIApplication sharedApplication] delegate]));
     self.managedObjectContext = appDelegete.managedObjectContext;
