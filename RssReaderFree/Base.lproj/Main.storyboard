@@ -106,45 +106,66 @@
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MPC-qG-uRL">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem style="done" systemItem="reply" id="EEz-Jr-bSO"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="AnN-0N-ILk"/>
+                                    <barButtonItem image="icoFav.png" id="XAt-Yf-GvQ" userLabel="收藏"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="YxW-2C-2vY" firstAttribute="leading" secondItem="iyq-jl-qaR" secondAttribute="leading" id="5ko-Mw-tX9"/>
-                            <constraint firstAttribute="bottom" secondItem="YxW-2C-2vY" secondAttribute="bottom" id="Lhc-oD-CCH"/>
-                            <constraint firstAttribute="trailing" secondItem="YxW-2C-2vY" secondAttribute="trailing" id="ZEe-Ua-rOI"/>
-                            <constraint firstItem="YxW-2C-2vY" firstAttribute="top" secondItem="iyq-jl-qaR" secondAttribute="top" id="f6p-PZ-hlY"/>
+                            <constraint firstItem="YxW-2C-2vY" firstAttribute="leading" secondItem="iyq-jl-qaR" secondAttribute="leading" id="1Bi-kT-QMR"/>
+                            <constraint firstAttribute="bottom" secondItem="MPC-qG-uRL" secondAttribute="bottom" id="2E9-5g-AyE"/>
+                            <constraint firstItem="YxW-2C-2vY" firstAttribute="bottom" secondItem="MPC-qG-uRL" secondAttribute="top" id="Er0-Bw-2re"/>
+                            <constraint firstItem="YxW-2C-2vY" firstAttribute="trailing" secondItem="MPC-qG-uRL" secondAttribute="trailing" id="Ft1-x5-HMu"/>
+                            <constraint firstItem="MPC-qG-uRL" firstAttribute="leading" secondItem="YxW-2C-2vY" secondAttribute="leading" id="hyi-qc-8tm"/>
+                            <constraint firstAttribute="trailing" secondItem="YxW-2C-2vY" secondAttribute="trailing" id="lkv-6m-cHz">
+                                <variation key="widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="YxW-2C-2vY" firstAttribute="top" secondItem="iyq-jl-qaR" secondAttribute="top" id="z1Y-Ai-kMe"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="YxW-2C-2vY"/>
+                                <exclude reference="MPC-qG-uRL"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="5ko-Mw-tX9"/>
-                                <exclude reference="Lhc-oD-CCH"/>
-                                <exclude reference="ZEe-Ua-rOI"/>
-                                <exclude reference="f6p-PZ-hlY"/>
+                                <exclude reference="1Bi-kT-QMR"/>
+                                <exclude reference="Er0-Bw-2re"/>
+                                <exclude reference="Ft1-x5-HMu"/>
+                                <exclude reference="lkv-6m-cHz"/>
+                                <exclude reference="z1Y-Ai-kMe"/>
+                                <exclude reference="2E9-5g-AyE"/>
+                                <exclude reference="hyi-qc-8tm"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="YxW-2C-2vY"/>
+                                <include reference="MPC-qG-uRL"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="5ko-Mw-tX9"/>
-                                <include reference="Lhc-oD-CCH"/>
-                                <include reference="ZEe-Ua-rOI"/>
-                                <include reference="f6p-PZ-hlY"/>
+                                <include reference="1Bi-kT-QMR"/>
+                                <include reference="Er0-Bw-2re"/>
+                                <include reference="Ft1-x5-HMu"/>
+                                <include reference="lkv-6m-cHz"/>
+                                <include reference="z1Y-Ai-kMe"/>
+                                <include reference="2E9-5g-AyE"/>
+                                <include reference="hyi-qc-8tm"/>
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="hfP-6o-RQ9"/>
+                    <navigationItem key="navigationItem" title="Title" id="MJV-HY-a8v"/>
                     <connections>
                         <outlet property="webView" destination="YxW-2C-2vY" id="Bir-UJ-acs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kP5-to-V7K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1579.5" y="-379"/>
+            <point key="canvasLocation" x="1579.5" y="-432"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="fue-e9-dvv">
