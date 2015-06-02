@@ -99,8 +99,8 @@
         article.date = item.date;
         article.identifier = item.identifier;
         article.isDisLike = nil;
-        article.isFavour = NO;
-        article.isRead = NO;
+        article.isFavour = @NO;
+        article.isRead = @NO;
         article.link = item.link;
         article.subscribeUrl = [self.rssSubscribeURL absoluteString];
         article.summary = item.summary;

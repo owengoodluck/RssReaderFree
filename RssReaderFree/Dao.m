@@ -29,8 +29,12 @@
 -(void) saveContext {
     if (self.managedObjectContext) {
         NSError *error;
-        if ([self.managedObjectContext hasChanges] && ![self.managedObjectContext save:&error]) {  // TODO: EXC_BAD_ACCESS
-            NSLog(@"Error saving %@ %@, %@, %@", [self class], error, [error userInfo],[error localizedDescription]);
+        if ([self.managedObjectContext hasChanges]) {  // TODO: EXC_BAD_ACCESS
+            if (![self.managedObjectContext save:&error]) {
+                NSLog(@"Error saving %@ %@, %@, %@", [self class], error, [error userInfo],[error localizedDescription]);
+            }
+        }else{
+            NSLog(@"No object changed for saving");
         }
     }
 	
