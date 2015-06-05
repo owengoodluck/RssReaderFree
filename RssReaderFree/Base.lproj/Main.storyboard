@@ -28,7 +28,9 @@
                             <outlet property="delegate" destination="lHg-wK-sID" id="o8g-DX-zlW"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="主页" id="evt-bt-t2i"/>
+                    <navigationItem key="navigationItem" title="主页" id="evt-bt-t2i">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Ww3-dO-J6u"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lCy-5M-N6p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -276,7 +278,7 @@
         <scene sceneID="2UM-AT-gjo">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Q3D-ly-xs1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="收藏列表" image="icoFav.png" id="YnU-Dh-MeP"/>
+                    <tabBarItem key="tabBarItem" title="收藏列表" image="icoFavTrue.png" id="YnU-Dh-MeP"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="yJf-No-Dyd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -312,7 +314,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icoFav.png" width="20" height="20"/>
         <image name="icoFavTrue.png" width="28" height="21"/>
         <image name="icoHome.png" width="20" height="20"/>
         <image name="icoSetting.png" width="20" height="20"/>

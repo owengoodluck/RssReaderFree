@@ -61,9 +61,69 @@
     
     self.edgesForExtendedLayout = UIRectEdgeNone;
     self.automaticallyAdjustsScrollViewInsets = NO;
+    [self resizeImage];
+    NSLog([self.htmlPageArticle htmlString]);
     [self.webView loadHTMLString:[self.htmlPageArticle htmlString] baseURL:nil];
+    //[self resizeImage];
     [self updateFavImage];
+    //[self getImageUrl];
 }
+
+-(void)getImageUrl{
+    UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTap:)];
+    doubleTap.numberOfTouchesRequired = 2;
+    [self.webView addGestureRecognizer:doubleTap];
+}
+
+-(void) doubleTap :(UITapGestureRecognizer*) sender
+{
+    //  <Find HTML tag which was clicked by user>
+    //  <If tag is IMG, then get image URL and start saving>
+    int scrollPositionY = [[self.webView stringByEvaluatingJavaScriptFromString:@"window.pageYOffset"] intValue];
+    int scrollPositionX = [[self.webView stringByEvaluatingJavaScriptFromString:@"window.pageXOffset"] intValue];
+    
+    int displayWidth = [[self.webView stringByEvaluatingJavaScriptFromString:@"window.outerWidth"] intValue];
+    CGFloat scale = self.webView.frame.size.width / displayWidth;
+    
+    CGPoint pt = [sender locationInView:self.webView];
+    pt.x *= scale;
+    pt.y *= scale;
+    pt.x += scrollPositionX;
+    pt.y += scrollPositionY;
+    
+    NSString *js = [NSString stringWithFormat:@"document.elementFromPoint(%f, %f).tagName", pt.x, pt.y];
+    NSString * tagName = [self.webView stringByEvaluatingJavaScriptFromString:js];
+    if ([tagName isEqualToString:@"img"]) {
+        NSString *imgURL = [NSString stringWithFormat:@"document.elementFromPoint(%f, %f).src", pt.x, pt.y];
+        NSString *urlToSave = [self.webView stringByEvaluatingJavaScriptFromString:imgURL];
+        //NSLog(@"image url=%@", urlToSave);
+    }
+}
+
+-(void)resizeImage{
+    [self.webView stringByEvaluatingJavaScriptFromString:
+     @"var script = document.createElement('script');"
+     "script.type = 'text/javascript';"
+     "script.text = \"function ResizeImages() { "
+     "var myimg,oldwidth;"
+     "var maxwidth=20;" //缩放系数
+     "for(i=0;i <document.images.length;i++){"
+     "myimg = document.images[i];"
+     "if(myimg.width > maxwidth){"
+     "oldwidth = myimg.width;"
+     "myimg.width = maxwidth;"
+     "myimg.height = myimg.height * (maxwidth/oldwidth);"
+     "}"
+     "}"
+     "}\";"
+     "document.getElementsByTagName('head')[0].appendChild(script);"];
+    
+    [self.webView stringByEvaluatingJavaScriptFromString:@"ResizeImages();"];
+
+    NSString *js_result = [self.webView stringByEvaluatingJavaScriptFromString:@"document.getElementsByName('q')[0].value='朱祁林';"];
+    NSLog(@"js_result = %@",js_result);
+}
+
 
 -(void)updateFavImage{
     if ([self.article.isFavour boolValue]) {

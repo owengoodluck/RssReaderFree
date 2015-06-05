@@ -83,7 +83,7 @@
     NSLog(@"1 feedParserDidStart");
 }
 - (void)feedParser:(MWFeedParser *)parser didParseFeedInfo:(MWFeedInfo *)info{
-    NSLog(@"2 didParseFeedInfo");
+    //NSLog(@"2 didParseFeedInfo");
 }
 
 - (void)feedParser:(MWFeedParser *)parser didParseFeedItem:(MWFeedItem *)item{
@@ -109,7 +109,7 @@
 }
 
 - (void)feedParserDidFinish:(MWFeedParser *)parser{
-    NSLog(@"4 feedParserDidFinish with url %@",self.rssSubscribeURL);
+    //NSLog(@"4 feedParserDidFinish with url %@",self.rssSubscribeURL);
     [self.articleDao saveContext];
     if (self.view.window) {
         [self performFetch];
@@ -119,10 +119,15 @@
     [self.refreshControl endRefreshing];
 }
 - (void)feedParser:(MWFeedParser *)parser didFailWithError:(NSError *)error{
-    NSLog(@"5 didFailWithError");
+    //NSLog(@"5 didFailWithError");
     [self.refreshControl endRefreshing];
-
     
+    UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:nil
+                                                       message:@"RSS源解析失败，请检查网络连接"
+                                                      delegate:nil
+                                             cancelButtonTitle:@"OK"
+                                             otherButtonTitles:nil, nil];
+    [alertView show];
 }
 
 -(ArticleDao *)articleDao{
